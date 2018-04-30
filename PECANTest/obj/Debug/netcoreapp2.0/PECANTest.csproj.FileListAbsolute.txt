@@ -1,0 +1,17 @@
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\PECANTest.deps.json
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\PECANTest.runtimeconfig.json
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\PECANTest.runtimeconfig.dev.json
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\PECANTest.dll
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\PECANTest.pdb
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\PECAN.dll
+F:\Code\PECAN\PECANTest\bin\Debug\netcoreapp2.0\PECAN.pdb
+F:\Code\PECAN\PECANTest\obj\Debug\netcoreapp2.0\PECANTest.csprojResolveAssemblyReference.cache
+F:\Code\PECAN\PECANTest\obj\Debug\netcoreapp2.0\PECANTest.csproj.CoreCompileInputs.cache
+F:\Code\PECAN\PECANTest\obj\Debug\netcoreapp2.0\PECANTest.AssemblyInfoInputs.cache
+F:\Code\PECAN\PECANTest\obj\Debug\netcoreapp2.0\PECANTest.AssemblyInfo.cs
+F:\Code\PECAN\PECANTest\obj\Debug\netcoreapp2.0\PECANTest.csproj.CopyComplete
+F:\Code\PECAN\PECANTest\obj\Debug\netcoreapp2.0\PECANTest.dll
+F:\Code\PECAN\PECANTest\obj\Debug\netcoreapp2.0\PECANTest.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PECAN", "PECAN\PECAN.csproj", "{CDC9FDF3-4C67-4629-9C47-B8E3FE5D9779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PECANTest", "PECANTest\PECANTest.csproj", "{7D04D36D-DAB4-4C22-BF1B-E7B922CD1411}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDC9FDF3-4C67-4629-9C47-B8E3FE5D9779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC9FDF3-4C67-4629-9C47-B8E3FE5D9779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC9FDF3-4C67-4629-9C47-B8E3FE5D9779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC9FDF3-4C67-4629-9C47-B8E3FE5D9779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D04D36D-DAB4-4C22-BF1B-E7B922CD1411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D04D36D-DAB4-4C22-BF1B-E7B922CD1411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D04D36D-DAB4-4C22-BF1B-E7B922CD1411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D04D36D-DAB4-4C22-BF1B-E7B922CD1411}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD01E94F-417A-4C7B-B420-065521C9AE49}
+	EndGlobalSection
+EndGlobal

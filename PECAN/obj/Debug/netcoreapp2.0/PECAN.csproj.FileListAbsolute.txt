@@ -1,0 +1,9 @@
+F:\Code\PECAN\PECAN\bin\Debug\netcoreapp2.0\PECAN.deps.json
+F:\Code\PECAN\PECAN\bin\Debug\netcoreapp2.0\PECAN.dll
+F:\Code\PECAN\PECAN\bin\Debug\netcoreapp2.0\PECAN.pdb
+F:\Code\PECAN\PECAN\obj\Debug\netcoreapp2.0\PECAN.csprojResolveAssemblyReference.cache
+F:\Code\PECAN\PECAN\obj\Debug\netcoreapp2.0\PECAN.csproj.CoreCompileInputs.cache
+F:\Code\PECAN\PECAN\obj\Debug\netcoreapp2.0\PECAN.AssemblyInfoInputs.cache
+F:\Code\PECAN\PECAN\obj\Debug\netcoreapp2.0\PECAN.AssemblyInfo.cs
+F:\Code\PECAN\PECAN\obj\Debug\netcoreapp2.0\PECAN.dll
+F:\Code\PECAN\PECAN\obj\Debug\netcoreapp2.0\PECAN.pdb
