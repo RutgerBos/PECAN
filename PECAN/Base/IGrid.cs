@@ -4,10 +4,20 @@ using System.Collections.Generic;
 
 namespace PECAN.Base
 {
-    public interface IGrid
+    /// <summary>
+    /// IGrid current assumes that there is only one cell type. Should be fine if we encapsulate ICell to some really generic but should be taken into account
+    /// Furthermore: IGrid currently asummes a single-layered grid. Fine for now, but I know that for example bram has a few thing with multilayer grids, 
+    /// IE: one layer with cells, and another layer with DNA fragments diffusing over the field.
+    /// </summary>
+    /// <typeparam name="TPos"></typeparam>
+    /// <typeparam name="TCell"></typeparam>
+    public interface IGrid<TPos,TCell>
+        where TCell : ICell<TCell>
+        where TPos : IPosition
     {
-        IEnumerable<ICell> GetCells();
-        IEnumerable<ICell> GetNeighbours(ICell cell);
-        IGrid CleanCopy();
+        IGrid<TPos,TCell> CleanCopy();
+        IEnumerable<TPos> GetPositions();
+        IEnumerable<TCell> GetNeighbours(TPos pos);
+        TCell this[TPos pos] { get; set; }
     }
 }

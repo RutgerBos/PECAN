@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PECAN.Random
@@ -27,6 +28,20 @@ namespace PECAN.Random
             var interval = startInclusive - endInclusive;
             int offset = (int)Math.Round(((double)interval) * Next());
             return startInclusive + offset;
+        }
+
+        public IEnumerable<TThing> Randomize<TThing>(IEnumerable<TThing> things)
+        {
+            var thingArray = things.ToArray();
+            var count = thingArray.Length;
+            foreach (var curr in Enumerable.Range(0, count))
+            {
+                var swap = NextInRange(curr, count - 1);
+                var temp = thingArray[swap];
+                thingArray[swap] = thingArray[curr];
+                thingArray[curr] = thingArray[swap];
+            }
+            return thingArray;
         }
     }
 }

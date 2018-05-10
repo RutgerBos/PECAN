@@ -6,16 +6,11 @@ using PECAN.Random;
 
 namespace PECAN.Base
 {
-    public abstract class GridBase<TPos> : IGrid
+    public abstract class GridBase<TPos, TCell> : IGrid<TPos, TCell>
         where TPos : IPosition
+        where TCell : ICell<TCell>
     {
-
-        public IEnumerable<ICell> GetNeighbours(ICell cell)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<ICell> GetNeighbours(TPos position)
+        public IEnumerable<TCell> GetNeighbours(TPos position)
         {
             foreach (var pos in GetNeighbourPositions(position))
             {
@@ -24,10 +19,8 @@ namespace PECAN.Base
         }
 
         protected abstract IEnumerable<TPos> GetNeighbourPositions(TPos position);
-        public abstract IEnumerable<ICell> GetCells();
 
-
-        public virtual ICell this[TPos pos]
+        public virtual TCell this[TPos pos]
         {
             get
             {
@@ -39,9 +32,9 @@ namespace PECAN.Base
             }
         }
 
-        protected abstract ICell GetCell(TPos pos);
-        protected abstract void SetCell(TPos pos, ICell cell);
-
-        public abstract IGrid CleanCopy();
+        protected abstract TCell GetCell(TPos pos);
+        protected abstract void SetCell(TPos pos, TCell cell);
+        public abstract IGrid<TPos, TCell> CleanCopy();
+        public abstract IEnumerable<TPos> GetPositions();
     }
 }

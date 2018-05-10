@@ -2,40 +2,34 @@
 using PECAN.Random;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PECAN._2D
 {
-    public class Grid2D : GridBase<Position2D>
+    public class Grid2D<TCell> : GridBase<Position2D, TCell>
+        where TCell:ICell<TCell>
     {
-        protected readonly ICell[,] TheGrid;
+        protected readonly TCell[,] TheGrid;
         protected readonly int XSize;
         protected readonly int YSize;
 
-        public Grid2D(int xSize, int ySize) : this(new ICell[xSize, ySize], xSize, ySize)
+        public Grid2D(int xSize, int ySize) : this(new TCell[xSize, ySize], xSize, ySize)
         {
         }
-        protected Grid2D(ICell[,] grid, int xSize, int ySize)
+        protected Grid2D(TCell[,] grid, int xSize, int ySize)
         {
             TheGrid = grid;
             XSize = xSize;
             YSize = ySize;
         }
 
-        public override IEnumerable<ICell> GetCells()
-        {
-            foreach (var cell in TheGrid)
-            {
-                yield return cell;
-            }
-        }
-
-        protected override ICell GetCell(Position2D pos)
+        protected override TCell GetCell(Position2D pos)
         {
             return TheGrid[pos.X, pos.Y];
         }
 
-        protected override void SetCell(Position2D pos, ICell cell)
+        protected override void SetCell(Position2D pos, TCell cell)
         {
             TheGrid[pos.X, pos.Y] = cell;
         }
@@ -71,9 +65,20 @@ namespace PECAN._2D
             }
         }
 
-        public override IGrid CleanCopy()
+        public override IGrid<Position2D,TCell> CleanCopy()
         {
-            return new Grid2D(XSize, YSize);
+            return new Grid2D<TCell>(XSize, YSize);
+        }
+
+        public override IEnumerable<Position2D> GetPositions()
+        {
+            foreach (var x in Enumerable.Range(0, XSize))
+            {
+                foreach (var y in Enumerable.Range(0, YSize))
+                {
+                    yield return new Position2D(x, y);
+                }
+            }
         }
     }
 }
