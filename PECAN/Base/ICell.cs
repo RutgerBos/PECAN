@@ -12,15 +12,14 @@ namespace PECAN.Base
     ///       AT THE VERY LEAST: Encapsulate all calls to ICell so that users do not need to see it.
     /// </summary>
     /// <typeparam name="TCell"></typeparam>
-    public interface ICell<TCell>
-        where TCell : ICell<TCell>
+    public interface ICell
     {
-        TCell DoUpdate(IEnumerable<TCell> neighbours, IRandom theRNG);
+        ICell DoUpdate(IEnumerable<ICell> neighbours, IRandom theRNG);
 
         /// <summary>
         /// Should return a Deep Clone of the cell
         /// </summary>
         /// <returns></returns>
-        TCell Clone();
+        ICell Clone();
     }
 }

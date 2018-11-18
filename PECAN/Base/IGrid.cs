@@ -11,13 +11,12 @@ namespace PECAN.Base
     /// </summary>
     /// <typeparam name="TPos"></typeparam>
     /// <typeparam name="TCell"></typeparam>
-    public interface IGrid<TPos,TCell>
-        where TCell : ICell<TCell>
+    public interface IGrid<TPos>
         where TPos : IPosition
     {
-        IGrid<TPos,TCell> CleanCopy();
+        IGrid<TPos> CleanCopy();
         IEnumerable<TPos> GetPositions();
-        IEnumerable<TCell> GetNeighbours(TPos pos);
-        TCell this[TPos pos] { get; set; }
+        IEnumerable<ICell> GetNeighbours(TPos pos);
+        ICell this[TPos pos] { get; set; }
     }
 }
